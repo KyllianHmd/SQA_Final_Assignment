@@ -9,6 +9,7 @@ First of all, this project is a software component in Python to store informatio
 - [Sprint backlog and task estimation](#sprint-backlog-and-task-estimation)
 	- [- **Task n°1: Create the Controller**](#ul-litask-n%c2%b01-create-the-controllerli-ul)
 	- [- **Task n°2: Create a Survey**](#ul-litask-n%c2%b02-create-a-surveyli-ul)
+	- [- **Task n°3: Add a Question**](#ul-litask-n%c2%b03-add-a-questionli-ul)
 
 - [SQA - Final Assignment](#sqa---final-assignment)
 	- [Introduction](#introduction)
@@ -16,6 +17,7 @@ First of all, this project is a software component in Python to store informatio
 - [Sprint backlog and task estimation](#sprint-backlog-and-task-estimation)
 	- [- **Task n°1: Create the Controller**](#ul-litask-n%c2%b01-create-the-controllerli-ul)
 	- [- **Task n°2: Create a Survey**](#ul-litask-n%c2%b02-create-a-surveyli-ul)
+	- [- **Task n°3: Add a Question**](#ul-litask-n%c2%b03-add-a-questionli-ul)
 
 - [**Project Documentation**](#project-documentation)
 
@@ -54,3 +56,14 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
   <br/>
 
   **Explanation:** Create a survey takes 40 minutes to do because you have to consider the fact that it creates the class "Survey", while managing the error handling (for example, if the name of the survey is well given). The possibility of calling the function via the Controller must also be implemented. This is a much shorter task than the creation of the controller but it is still a main and important function for the realization of a survey.
+
+
+- **Task n°3: Add a Question**
+---
+  **Description:** In a survey, it is essential to add a question. Now that the class "Survey" has been created, we just have the function to create and implement in our class Controller and in our class Survey. The function takes in parameter the name of the survey in which we want to add the question and finally the question. When the function doesn't return any errors, we are left with the fact that the question has been added.
+  <br/>
+
+  **Task Estimation:** 20 minutes.
+  <br/>
+
+  **Explanation:** Adding a question in a survey takes 20 minutes to do because you have to manage all the error handling (for example, if the survey is already created before adding a question). To compare with the Task n°2, it's shorter because we can see that there is just the function to create and implement in our class Controller and Survey.
