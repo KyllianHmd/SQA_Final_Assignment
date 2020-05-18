@@ -13,6 +13,7 @@ First of all, this project is a software component in Python to store informatio
 	- [- **Task n°4: Get a list of all surveys**](#ul-litask-n%c2%b04-get-a-list-of-all-surveysli-ul)
 	- [- **Task n°5: Get a specific survey**](#ul-litask-n%c2%b05-get-a-specific-surveyli-ul)
 	- [- **Task n°6: Add a response**](#ul-litask-n%c2%b06-add-a-responseli-ul)
+	- [- **Task n°7: Get Survey Responses**](#ul-litask-n%c2%b07-get-survey-responsesli-ul)
 
 - [SQA - Final Assignment](#sqa---final-assignment)
 	- [Introduction](#introduction)
@@ -24,6 +25,7 @@ First of all, this project is a software component in Python to store informatio
 	- [- **Task n°4: Get a list of all surveys**](#ul-litask-n%c2%b04-get-a-list-of-all-surveysli-ul)
 	- [- **Task n°5: Get a specific survey**](#ul-litask-n%c2%b05-get-a-specific-surveyli-ul)
 	- [- **Task n°6: Add a response**](#ul-litask-n%c2%b06-add-a-responseli-ul)
+	- [- **Task n°7: Get Survey Responses**](#ul-litask-n%c2%b07-get-survey-responsesli-ul)
 
 - [**Project Documentation**](#project-documentation)
 
@@ -105,3 +107,13 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
   <br/>
 
   **Explanation:** Similar to Task n°3, this task is more complicated because it involves the creation of another "SurveyResponse" class and the fact that you have to link a user's responses to a survey. In comparison, having a large error handling and implementation via our Controller, our Survey class and finally in the last "SurveyResponse" class, this task will take about 1 hour to complete.
+
+  - **Task n°7: Get Survey Responses**
+---
+  **Description:** This function will allow you to have all the answers given by all the users of a particular survey. This function will just take the name of the survey in parameter and return an array with all the answers of each user.
+  <br/>
+
+  **Task Estimation:** 10 minutes.
+  <br/>
+
+  **Explanation:** Like Task n°5, it is simply a matter of returning all the answers to a particular survey. The error handling will take a few minutes to do but the task is quite simple to perform.
