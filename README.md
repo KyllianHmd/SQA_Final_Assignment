@@ -11,8 +11,7 @@ First of all, this project is a software component in Python to store informatio
 - [Velocity Metric](#velocity-metric)
 - [Project documentation](#project-documentation)
 - [Unit testing and Test-Driven development](#unit-testing-and-test-driven-development)
-
-- [**Test coverage metric**](#test-coverage-metric)
+- [Test coverage metric](#test-coverage-metric)
 
 - [**Team version-control**](#team-version-control)
 
@@ -328,3 +327,58 @@ You can run your unit tests by executing this command:
 After the execution of your tests, if everything is green that means all the tests are passed. However, if the output is with red color, it means that there are errors in your tests. In our project, each test has the same name as the test function in order to simplify the work of the developers and make the structure of our tests more understandable.
 
 Test-Driven development is a development method that aims to reduce the anomalies of an application by encouraging frequent testing. The "Test first" policy would encourage developers to be more rigorous and to correct errors in near real time. The fact that the developer must create the test code before writing the first line would have an impact on the quality of the final product.
+
+# Test coverage metric
+
+This part is used to test our program in a general way and will show how to make the Code Cover Tool work. The code coverage tool I have chosen to use for this project is: **Coverage<span></span>.py**
+
+To introduce what **Coverage<span></span>.py** is: it is a tool for measuring code coverage of Python programs. It monitors your program, noting which parts of the code have been executed, then analyzes the source to identify code that could have been executed but was not.
+
+Coverage measurement is typically used to gauge the effectiveness of tests. It can show which parts of your code are being exercised by tests, and which are not.
+
+First, you need to install **Coverage<span></span>.py** using this command line in your terminal:
+<br/>
+
+<pre><code>$ pip3 install coverage</code></pre>
+
+Then, we will finally be able to use Coverage. Type the following command to run your test suite and collect data:
+<br/>
+
+<pre><code>$ coverage run -m pytest</code></pre>
+
+After executing this command line, your terminal will display something like this:
+
+<img src="./img/coverage_run_pytest.png" alt="coverage_run_pytest"/>
+
+On our picture above, we can see that I have performed 55 test functions that are running and none of them failed.
+
+In order to have more details to know which function is passed or not, use the following command:
+<br/>
+
+<pre><code>$ coverage run -m pytest -v</code></pre>
+
+It will give you something like that, with all the details of passed or failed functions (picture below).
+
+<img src="./img/coverage_run_pytest-v.png" alt="coverage_run_pytest-v"/>
+
+It is also possible to use <code>coverage report</code> to report on the results. Execute the following command to get the details of our tests on our program:
+<br/>
+
+<pre><code>$ coverage report -m survey.py</code></pre>
+
+For our project, it will give you this kind of result.
+
+<img src="./img/coverage_report-m.png" alt="coverage_run_pytest-v"/>
+
+We can see that, for our project, we covered 100% of our code. So we tested everything and missed no functions to test. We can see that we made 162 statements which corresponded to the result tests that our functions had to return.
+
+Finally, still thanks to our Coverage tool, we can have a graphic version and a nicer presentation of our tests with the following command:
+<br/>
+
+<pre><code>$ coverage html survey.py</code></pre>
+
+This gives us a detailed report available on our local browser, showing us which part of the code was covered by our tests.
+
+<img src="./img/gif-test-coverage.gif" />
+
+_Note: I upload this video on youtube if you need to check in more details the presentation of the tests in a better quality: https://www.youtube.com/watch?v=oWBVTojG-uc_
