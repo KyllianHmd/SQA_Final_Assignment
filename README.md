@@ -10,8 +10,7 @@ First of all, this project is a software component in Python to store informatio
 - [Sprint backlog and task estimation](#sprint-backlog-and-task-estimation)
 - [Velocity Metric](#velocity-metric)
 - [Project documentation](#project-documentation)
-
-- [**Unit testing and Test-Driven development**](#unit-testing-and-test-driven-development)
+- [Unit testing and Test-Driven development](#unit-testing-and-test-driven-development)
 
 - [**Test coverage metric**](#test-coverage-metric)
 
@@ -315,3 +314,17 @@ In case of errors, the function may return you this:
 <pre><code>> Error: Sorry, the survey 'Example Survey' doesn't exist.</code></pre>
 
 _Note: The standard deviation will return 'Error: It requires a minimum of 2 users to calculate the standard deviation' if there is only one user that answer of the question of the survey_
+
+# Unit testing and Test-Driven development
+
+In computer programming, unit testing is a procedure for verifying the proper functioning of a specific piece of software or portion of a program.
+
+For our project, I used **pytest** for unit tests. The pytest framework makes it easy to write small tests, yet scales to support complex functional testing for applications and libraries.
+
+You can run your unit tests by executing this command:
+
+<pre><code>$ pytest</code></pre>
+
+After the execution of your tests, if everything is green that means all the tests are passed. However, if the output is with red color, it means that there are errors in your tests. In our project, each test has the same name as the test function in order to simplify the work of the developers and make the structure of our tests more understandable.
+
+Test-Driven development is a development method that aims to reduce the anomalies of an application by encouraging frequent testing. The "Test first" policy would encourage developers to be more rigorous and to correct errors in near real time. The fact that the developer must create the test code before writing the first line would have an impact on the quality of the final product.
