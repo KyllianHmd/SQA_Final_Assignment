@@ -403,27 +403,32 @@ $ git push origin [branchname]</code></pre>
 
 4. Lastly, you have to make a pull request to submit your final work on the preprod branch. You have to be sure that you are up to date with the preprod branch before submitting your work. Finally, when you will ask for a pull request, the project leader will review your code and validate your pull request for merging with the master branch.
 
+Here, a sample of the Gitflow process for our project:
+
+<img src="./img/gitflow-process.png" />
+
+
 There are several tools to help you manage Git such as GitTower, GitKraken, and SourceTree. This can help you manage your branch and track the progress of your project in a more global way.
 
 # Code-review checklist
 
 Here the checklist of things that a reviewer should check and ask to himself when reviewing a pull request:
 
-- [ ] Is the code working ?
-- [ ] Is the code can be easily understood ?
-- [ ] Is there duplicate code ?
-- [ ] Any global variables be replaced ?
-- [ ] Is there commented code ?
-- [ ] Is there log or debug code ?
-- [ ] May any code should be replaced by built-in functions ?
-- [ ] Are there obvious optimizations for the performance ?
-- [ ] Is the error handling well done ?
-- [ ] Are input and output values checked ?
-- [ ] Are unit tests made for the code ?
-- [ ] Are all functions commented in the documentation ?
-- [ ] Is there incomplete code ?
-- [ ] Is any unusual behavior or errors described
-- [ ] Are invalid parameter values handled ?
+- [x] Is the code working ?
+- [x] Is the code can be easily understood ?
+- [x] Is there duplicate code ?
+- [x] Any global variables be replaced ?
+- [x] Is there commented code ?
+- [x] Is there log or debug code ?
+- [x] May any code should be replaced by built-in functions ?
+- [x] Are there obvious optimizations for the performance ?
+- [x] Is the error handling well done ?
+- [x] Are input and output values checked ?
+- [x] Are unit tests made for the code ?
+- [x] Are all functions commented in the documentation ?
+- [x] Is there incomplete code ?
+- [x] Is any unusual behavior or errors described
+- [x] Are invalid parameter values handled ?
 
 There are tools to assess the quality of the code of the whole project is to use a tool for static analysis of the code. Don't hesitate to use tools such as SonarQube, NDepend, FxCop which are made for reviewers.
 
