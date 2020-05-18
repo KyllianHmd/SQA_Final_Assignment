@@ -12,6 +12,7 @@ First of all, this project is a software component in Python to store informatio
 	- [- **Task n°3: Add a Question**](#ul-litask-n%c2%b03-add-a-questionli-ul)
 	- [- **Task n°4: Get a list of all surveys**](#ul-litask-n%c2%b04-get-a-list-of-all-surveysli-ul)
 	- [- **Task n°5: Get a specific survey**](#ul-litask-n%c2%b05-get-a-specific-surveyli-ul)
+	- [- **Task n°6: Add a response**](#ul-litask-n%c2%b06-add-a-responseli-ul)
 
 - [SQA - Final Assignment](#sqa---final-assignment)
 	- [Introduction](#introduction)
@@ -22,6 +23,7 @@ First of all, this project is a software component in Python to store informatio
 	- [- **Task n°3: Add a Question**](#ul-litask-n%c2%b03-add-a-questionli-ul)
 	- [- **Task n°4: Get a list of all surveys**](#ul-litask-n%c2%b04-get-a-list-of-all-surveysli-ul)
 	- [- **Task n°5: Get a specific survey**](#ul-litask-n%c2%b05-get-a-specific-surveyli-ul)
+	- [- **Task n°6: Add a response**](#ul-litask-n%c2%b06-add-a-responseli-ul)
 
 - [**Project Documentation**](#project-documentation)
 
@@ -92,3 +94,14 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
   <br/>
 
   **Explanation:** Just like Task n°4, it is quite similar but a little bit longer to do because there is an error handling to implement because the survey in question must be created beforehand otherwise an error will appear. It is a simple task on the whole and requires little implementation time.
+
+
+- **Task n°6: Add a response**
+---
+  **Description:** Adding a response to a survey question is one of the main features of our project. Indeed, this function will lead to the creation of another class that will be called "SurveyResponse". In this class, we will link each response to a survey. And each response will be linked to a user. This function will therefore take the name of the survey, the response and finally the user email in order to identify the person who responded to the survey.
+  <br/>
+  
+  **Task Estimation:** 1 hour.
+  <br/>
+
+  **Explanation:** Similar to Task n°3, this task is more complicated because it involves the creation of another "SurveyResponse" class and the fact that you have to link a user's responses to a survey. In comparison, having a large error handling and implementation via our Controller, our Survey class and finally in the last "SurveyResponse" class, this task will take about 1 hour to complete.
