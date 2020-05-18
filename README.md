@@ -14,7 +14,6 @@ First of all, this project is a software component in Python to store informatio
 - [Test coverage metric](#test-coverage-metric)
 - [Team version-control](#team-version-control)
 
-- [**Team version-control**](#team-version-control)
 
 - [**Code-review checklist**](#code-review-checklist)
 
