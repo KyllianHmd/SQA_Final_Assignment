@@ -8,12 +8,14 @@ First of all, this project is a software component in Python to store informatio
 	- [Project description](#project-description)
 - [Sprint backlog and task estimation](#sprint-backlog-and-task-estimation)
 	- [- **Task n°1: Create the Controller**](#ul-litask-n%c2%b01-create-the-controllerli-ul)
+	- [- **Task n°2: Create a Survey**](#ul-litask-n%c2%b02-create-a-surveyli-ul)
 
 - [SQA - Final Assignment](#sqa---final-assignment)
 	- [Introduction](#introduction)
 	- [Project description](#project-description)
 - [Sprint backlog and task estimation](#sprint-backlog-and-task-estimation)
 	- [- **Task n°1: Create the Controller**](#ul-litask-n%c2%b01-create-the-controllerli-ul)
+	- [- **Task n°2: Create a Survey**](#ul-litask-n%c2%b02-create-a-surveyli-ul)
 
 - [**Project Documentation**](#project-documentation)
 
@@ -42,3 +44,13 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
   <br/>
 
   **Explanation:** Taking into account the implementation of all the functions of our classes, the controller is a longer task because it is simply the structure of our program. It is via this class Controller that we will manage the whole creation of a survey, add questions, answers and call the statistics functions.
+
+- **Task n°2: Create a Survey**
+---
+  **Description:** It is essential to be able to create a survey. Therefore you need to create a function in our class "Survey", called in our Controller class, to be able to create a survey. The function will take the name of the survey you want to create as a parameter. When the function is called and does not return an error, it returns that the survey has been created successfully.
+  <br/>
+
+  **Task Estimation:** 40 minutes.
+  <br/>
+
+  **Explanation:** Create a survey takes 40 minutes to do because you have to consider the fact that it creates the class "Survey", while managing the error handling (for example, if the name of the survey is well given). The possibility of calling the function via the Controller must also be implemented. This is a much shorter task than the creation of the controller but it is still a main and important function for the realization of a survey.
