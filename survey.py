@@ -16,7 +16,7 @@ def RepresentsInt(s):
         return True
     except ValueError:
         return False
-		
+
 class SurveyResponse:
 	def __init__(self, userEmail):
 		self.userEmail = userEmail
@@ -109,7 +109,6 @@ class Survey:
 			sd = round(sd, 2)
 		return minValue, maxValue, average, sd, "None"
 
-
 class Controller:
 	def __init__(self):
 		self.surveyslist = []
@@ -174,7 +173,7 @@ class Controller:
 				return surveyResponses
 		if i == 0:
 			return "Error: Sorry, the survey '" + surveyName + "' doesn't exist."
-	
+
 	def GetSurveyStatistics(self, surveyName):
 		for survey in self.surveyslist:
 			i = 0
