@@ -284,3 +284,18 @@ In case of errors, the function may return you this:
 
 - If the survey doesn't exist, the function will return you:
 <pre><code>> Error: Sorry, the survey 'Example Survey' doesn't exist.</code></pre>
+
+* **GetSurveyStatistics(surveyName)**
+
+Thanks to this function, we could have the statistic of the survey (the min value, the max value, the average, the standard deviation, and an error if occured). You have to send the name of the survey in parameter. You may call the function like this:
+
+<pre><code>minValue, maxValue, average, sd, err = mySurvey.GetSurveyStatistics("Example Survey")</code></pre>
+
+If all went well, the function will return you all the statistics of the survey.
+
+In case of errors, the function may return you this:
+
+- If the survey doesn't exist, the function will return you:
+<pre><code>> Error: Sorry, the survey 'Example Survey' doesn't exist.</code></pre>
+
+_Note: The standard deviation will return 'Error: It requires a minimum of 2 users to calculate the standard deviation' if there is only one user that answer of the questions of the survey_
