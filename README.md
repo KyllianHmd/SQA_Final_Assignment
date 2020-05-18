@@ -179,3 +179,20 @@ Thanks to this function you can create a new survey. You may create as many surv
 The function will return you:
 
 <pre><code>> Example Survey have been created</code></pre>
+
+- **GetSurveysList()**
+
+This function give us the possibility to retrieve all the surveys created before. You may call the function like this:
+
+<pre><code>surveyList = mySurvey.GetSurveysList()</code></pre>
+
+The function will return you an **array** of Survey class where there are all the surveys created before. You may access have all the name of all surveys by using a loop like this:
+
+<pre><code>for survey in surveysList:
+  print (survey.surveyName)
+
+OUTPUT:
+> Example Survey
+</code></pre>
+
+If there is no survey created, the function will return you an empty array of Survey class.
