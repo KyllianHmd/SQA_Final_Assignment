@@ -30,6 +30,53 @@ def testCreateSurvey6():
 	surveyCreated = example.CreateSurvey("Coding Survey")
 	assert surveyCreated != "Programing Survey have been created"
 
+def testGetSurveysList():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Mexican Survey")
+	surveyList = example.GetSurveysList()
+	for i in range(len(surveyList)):
+		assert surveyList[i].surveyName == "Mexican Survey"
+		
+def testGetSurveysList2():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Mexican Survey")
+	surveyCreated = example.CreateSurvey("Food Survey")
+	surveyCreated = example.CreateSurvey("Lesson Survey")
+	surveyList = example.GetSurveysList()
+	for i in range(len(surveyList)):
+		if (surveyList[i].surveyName == "Mexican Survey"):
+			assert surveyList[i].surveyName == "Mexican Survey"
+		if (surveyList[i].surveyName == "Food Survey"):
+			assert surveyList[i].surveyName == "Food Survey"
+		if (surveyList[i].surveyName == "Lesson Survey"):
+			assert surveyList[i].surveyName == "Lesson Survey"
+
+def testGetSurveysList3():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Mexican Survey")
+	surveyCreated = example.CreateSurvey("Food Survey")
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	surveyCreated = example.CreateSurvey("Coding Survey")
+	surveyCreated = example.CreateSurvey("Kyllian's Survey")
+	surveyCreated = example.CreateSurvey("Florian's Survey")
+	surveyCreated = example.CreateSurvey("Diet Survey")
+	surveyList = example.GetSurveysList()
+	for i in range(len(surveyList)):
+		if (surveyList[i].surveyName == "Mexican Survey"):
+			assert surveyList[i].surveyName == "Mexican Survey"
+		if (surveyList[i].surveyName == "Food Survey"):
+			assert surveyList[i].surveyName == "Food Survey"
+		if (surveyList[i].surveyName == "Cars Survey"):
+			assert surveyList[i].surveyName == "Cars Survey"
+		if (surveyList[i].surveyName == "Coding Survey"):
+			assert surveyList[i].surveyName == "Coding Survey"
+		if (surveyList[i].surveyName == "Kyllian's Survey"):
+			assert surveyList[i].surveyName == "Kyllian's Survey"
+		if (surveyList[i].surveyName == "Florian's Survey"):
+			assert surveyList[i].surveyName == "Florian's Survey"
+		if (surveyList[i].surveyName == "Diet Survey"):
+			assert surveyList[i].surveyName == "Diet Survey"
+
 def testAddQuestion():
 	example = survey.Controller()
 	surveyCreated = example.CreateSurvey("Mexican Survey")
