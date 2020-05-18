@@ -6,9 +6,16 @@ class SurveyResponse:
 
 
 class Survey:
-	def __init__(self):
-		pass
+	def __init__(self, surveyName):
+		self.surveyName = surveyName
+		self.questions = []
+		self.surveyResponses = []
 
 class Controller:
 	def __init__(self):
-		pass
+		self.surveyslist = []
+
+	def CreateSurvey(self, surveyName):
+		newSurvey = Survey(surveyName)
+		self.surveyslist.append(newSurvey)
+		return newSurvey.surveyName + ' have been created'
