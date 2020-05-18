@@ -236,3 +236,31 @@ In case of errors, the function may return you this:
 
 - If the survey doesn't exist, the function will return you:
 <pre><code>> Error: Sorry, the survey 'Example Survey' doesn't exist</code></pre>
+
+- **AddResponse(surveyName, response, userEmail)**
+
+This function allows us to add a response in a specific survey. You have to send the name of the survey, the response (an integer between 1 and 5) and the user email in parameter. You may call the function like this:
+
+<pre><code>mySurvey.AddResponse("Example Survey", 3, "kyllian@epitech.eu")</code></pre>
+
+If all went well, the function will return you:
+
+<pre><code>The response '3' have been added by 'kyllian@epitech.eu' in the survey 'Example Survey'
+</code></pre>
+
+In case of errors, the function may return you this:
+
+- If the format of the response isn't the good one, the function will return you:
+<pre><code>> Error: The response must be an integer between 1 and 5.</code></pre>
+
+- If the response given isn't a valid integer, the function will return you:
+<pre><code>> Error: The response must be a valid integer.</code></pre>
+
+- If the survey doesn't exist, the function will return you:
+<pre><code>> Error: Sorry, you can't add a response because the survey 'Example Survey' doesn't exist.</code></pre>
+
+- If you want to add more responses than the number of questions:
+<pre><code>> Error: You can't add more responses than the number of question.</code></pre>
+
+- If there is no questions:
+<pre><code>> Error: Sorry, you can't add a response because there is no questions</code></pre>
