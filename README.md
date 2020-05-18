@@ -12,8 +12,8 @@ First of all, this project is a software component in Python to store informatio
 - [Project documentation](#project-documentation)
 - [Unit testing and Test-Driven development](#unit-testing-and-test-driven-development)
 - [Test coverage metric](#test-coverage-metric)
+- [Team version-control](#team-version-control)
 
-- [**Team version-control**](#team-version-control)
 
 - [**Code-review checklist**](#code-review-checklist)
 
@@ -382,3 +382,26 @@ This gives us a detailed report available on our local browser, showing us which
 <img src="./img/gif-test-coverage.gif" />
 
 _Note: I upload this video on youtube if you need to check in more details the presentation of the tests in a better quality: https://www.youtube.com/watch?v=oWBVTojG-uc_
+
+# Team version-control
+
+Version management consists of managing all versions of one or more files. Mainly used in the field of software creation, it mainly concerns the management of source codes.
+
+Being able to work on your own without impacting the work of others when developing the features of a project is one of the main challenges. For doing this, we use the tool called **Git** and follow a Gitflow process.
+
+A Gitflow process is:
+
+1. Creating our own git branch: Each developer of the project have to create his own git branch in order to avoid to overwrite or modify any source code of an another developer. His git branch must be created from the preprod branch. For clarity, each git branch name must include the name of the developer and the name of the feature. To create a git branch, execute this command by replacing the branchname:
+<pre><code>$ git checkout -b [branchname] </code></pre>
+
+2. Before to push any code, you have to pull the preprod branch to retrieve the code of all other developers. Then, type this following command:
+<pre><code>$ git pull origin preprod</code></pre>
+
+3. Now, you are on the latest version of preprod branch and up to date. You will be able to push your work with a specific message of your commit by following these commands:
+  <pre><code>$ git add [files]
+$ git commit -m "your commit message"
+$ git push origin [branchname]</code></pre>
+
+4. Lastly, you have to make a pull request to submit your final work on the preprod branch. You have to be sure that you are up to date with the preprod branch before submitting your work. Finally, when you will ask for a pull request, the project leader will review your code and validate your pull request for merging with the master branch.
+
+There are several tools to help you manage Git such as GitTower, GitKraken, and SourceTree. This can help you manage your branch and track the progress of your project in a more global way.
