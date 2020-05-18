@@ -264,3 +264,23 @@ In case of errors, the function may return you this:
 
 - If there is no questions:
 <pre><code>> Error: Sorry, you can't add a response because there is no questions</code></pre>
+
+- **GetSurveyResponses(surveyName)**
+
+This function give us the possibility to retrieve all the responses of a specific survey. You may call the function like this:
+
+<pre><code>surveyResponses = mySurvey.GetSurveyResponses("Example Survey")</code></pre>
+
+If all went well, the function will return you the specific survey response class. Then, you will be able to retrieve the responses of the users of this specific survey like that:
+
+<pre><code>for surveyResponse in surveyResponses:
+  print("user: ", surveyResponse.userEmail , "| responses: ", ", ".join(str(response) for response in surveyResponse.responses))
+
+OUTPUT:
+> user:  kyllian@epitech.eu | responses:  3
+</code></pre>
+
+In case of errors, the function may return you this:
+
+- If the survey doesn't exist, the function will return you:
+<pre><code>> Error: Sorry, the survey 'Example Survey' doesn't exist.</code></pre>
