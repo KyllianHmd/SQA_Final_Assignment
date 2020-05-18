@@ -299,3 +299,19 @@ In case of errors, the function may return you this:
 <pre><code>> Error: Sorry, the survey 'Example Survey' doesn't exist.</code></pre>
 
 _Note: The standard deviation will return 'Error: It requires a minimum of 2 users to calculate the standard deviation' if there is only one user that answer of the questions of the survey_
+
+- **GetQuestionStatistics(question, surveyName)**
+
+Thanks to this function, we could have the statistic of a specific question of the survey (the min value, the max value, the average, the standard deviation, and an error if occured). You have to send a question and the name of the survey in parameter. You have to call the function like this:
+
+<pre><code>minValue, maxValue, average, sd, err = mySurvey.GetQuestionStatistics("Example Question", "Example Survey")
+</code></pre>
+
+If all went well, the function will return you all the statistics of the specific question of the survey.
+
+In case of errors, the function may return you this:
+
+- If the survey doesn't exist, the function will return you:
+<pre><code>> Error: Sorry, the survey 'Example Survey' doesn't exist.</code></pre>
+
+_Note: The standard deviation will return 'Error: It requires a minimum of 2 users to calculate the standard deviation' if there is only one user that answer of the question of the survey_
