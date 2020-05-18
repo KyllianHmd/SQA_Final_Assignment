@@ -207,3 +207,104 @@ def testAddQuestion5():
 	assert addQuestion == "Error: Sorry, you can't add a question because the survey 'France Survey' doesn't exist"
 	addQuestion = example.AddQuestion("YesYes Survey", "Question3bis")
 	assert addQuestion == "Error: Sorry, you can't add a question because the survey 'YesYes Survey' doesn't exist"
+
+def testAddResponse():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addResponse = example.AddResponse("Cars Survey", 2, "kyllian@epitech.eu")
+	assert addResponse == "Error: Sorry, you can't add a response because there are no questions"
+	addResponse = example.AddResponse("Cars Survey", 3, "kyllian@epitech.eu")
+	assert addResponse == "Error: Sorry, you can't add a response because there are no questions"
+
+def testAddResponse2():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addResponse = example.AddResponse("Cars Survey", 2, "kyllian@epitech.eu")
+	assert addResponse == "The response '2' have been added by 'kyllian@epitech.eu' in the survey 'Cars Survey'"
+	addResponse = example.AddResponse("Cars Survey", 5, "kyllian@epitech.eu")
+	assert addResponse == "Error: You can't add more responses than the number of question."
+
+def testAddResponse3():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addQuestion = example.AddQuestion("Cars Survey", "Question2")
+	addQuestion = example.AddQuestion("Cars Survey", "Question3")
+	addQuestion = example.AddQuestion("Cars Survey", "Question4")
+	addResponse = example.AddResponse("Cars Survey", 2, "kyllian@epitech.eu")
+	assert addResponse == "The response '2' have been added by 'kyllian@epitech.eu' in the survey 'Cars Survey'"
+	addResponse = example.AddResponse("Cars Survey", 5, "kyllian@epitech.eu")
+	assert addResponse == "The response '5' have been added by 'kyllian@epitech.eu' in the survey 'Cars Survey'"
+	addResponse = example.AddResponse("Cars Survey", 1, "kyllian@epitech.eu")
+	assert addResponse == "The response '1' have been added by 'kyllian@epitech.eu' in the survey 'Cars Survey'"
+	addResponse = example.AddResponse("Cars Survey", 1, "kyllian@epitech.eu")
+	assert addResponse == "The response '1' have been added by 'kyllian@epitech.eu' in the survey 'Cars Survey'"
+
+def testAddResponse4():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addQuestion = example.AddQuestion("Cars Survey", "Question2")
+	addResponse = example.AddResponse("Cars Survey", 7, "kyllian@epitech.eu")
+	assert addResponse == "Error: The response must be an integer between 1 and 5."
+	addResponse = example.AddResponse("Cars Survey", 10, "kyllian@epitech.eu")
+	assert addResponse == "Error: The response must be an integer between 1 and 5."
+	addResponse = example.AddResponse("Cars Survey", 5, "kyllian@epitech.eu")
+	assert addResponse == "The response '5' have been added by 'kyllian@epitech.eu' in the survey 'Cars Survey'"
+
+def testAddResponse5():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addQuestion = example.AddQuestion("Cars Survey", "Question2")
+	addResponse = example.AddResponse("Cars Survey", 1, "florian@epitech.eu")
+	assert addResponse == "The response '1' have been added by 'florian@epitech.eu' in the survey 'Cars Survey'"
+	addResponse = example.AddResponse("Cars Survey", 3, "thomas@epitech.eu")
+	assert addResponse == "The response '3' have been added by 'thomas@epitech.eu' in the survey 'Cars Survey'"
+	addResponse = example.AddResponse("Cars Survey", 4, "kyllian@epitech.eu")
+	assert addResponse == "The response '4' have been added by 'kyllian@epitech.eu' in the survey 'Cars Survey'"
+
+def testAddResponse6():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addQuestion = example.AddQuestion("Cars Survey", "Question2")
+	addResponse = example.AddResponse("Food Survey", 1, "florian@epitech.eu")
+	assert addResponse == "Error: Sorry, you can't add a response because the survey 'Food Survey' doesn't exist."
+	addResponse = example.AddResponse("Yes Survey", 3, "thomas@epitech.eu")
+	assert addResponse == "Error: Sorry, you can't add a response because the survey 'Yes Survey' doesn't exist."
+	addResponse = example.AddResponse("Football Survey", 4, "kyllian@epitech.eu")
+	assert addResponse == "Error: Sorry, you can't add a response because the survey 'Football Survey' doesn't exist."
+
+def testAddResponse7():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addQuestion = example.AddQuestion("Cars Survey", "Question2")
+	addResponse = example.AddResponse("Cars Survey", "Blablabla", "florian@epitech.eu")
+	assert addResponse == "Error: The response must be a valid integer."
+
+def testAddResponse8():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addQuestion = example.AddQuestion("Cars Survey", "Question2")
+	addResponse = example.AddResponse("Cars Survey", "Blablabla", "florian@epitech.eu")
+	assert addResponse == "Error: The response must be a valid integer."
+	addResponse = example.AddResponse("Cars Survey", "123HEY123", "florian@epitech.eu")
+	assert addResponse == "Error: The response must be a valid integer."
+
+def testAddResponse9():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addQuestion = example.AddQuestion("Cars Survey", "Question2")
+	addResponse = example.AddResponse("Cars Survey", "Blablabla", "florian@epitech.eu")
+	assert addResponse == "Error: The response must be a valid integer."
+	addResponse = example.AddResponse("Cars Survey", 10, "florian@epitech.eu")
+	assert addResponse == "Error: The response must be an integer between 1 and 5."
+	addResponse = example.AddResponse("Football Survey", 4, "kyllian@epitech.eu")
+	assert addResponse == "Error: Sorry, you can't add a response because the survey 'Football Survey' doesn't exist."
+	addResponse = example.AddResponse("Cars Survey", 2, "riwan@epitech.eu")
+	assert addResponse == "The response '2' have been added by 'riwan@epitech.eu' in the survey 'Cars Survey'"
