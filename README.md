@@ -11,6 +11,7 @@ First of all, this project is a software component in Python to store informatio
 	- [- **Task n°2: Create a Survey**](#ul-litask-n%c2%b02-create-a-surveyli-ul)
 	- [- **Task n°3: Add a Question**](#ul-litask-n%c2%b03-add-a-questionli-ul)
 	- [- **Task n°4: Get a list of all surveys**](#ul-litask-n%c2%b04-get-a-list-of-all-surveysli-ul)
+	- [- **Task n°5: Get a specific survey**](#ul-litask-n%c2%b05-get-a-specific-surveyli-ul)
 
 - [SQA - Final Assignment](#sqa---final-assignment)
 	- [Introduction](#introduction)
@@ -20,6 +21,7 @@ First of all, this project is a software component in Python to store informatio
 	- [- **Task n°2: Create a Survey**](#ul-litask-n%c2%b02-create-a-surveyli-ul)
 	- [- **Task n°3: Add a Question**](#ul-litask-n%c2%b03-add-a-questionli-ul)
 	- [- **Task n°4: Get a list of all surveys**](#ul-litask-n%c2%b04-get-a-list-of-all-surveysli-ul)
+	- [- **Task n°5: Get a specific survey**](#ul-litask-n%c2%b05-get-a-specific-surveyli-ul)
 
 - [**Project Documentation**](#project-documentation)
 
@@ -80,3 +82,13 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
   <br/>
 
   **Explanation:** Getting a list of all the surveys you have created is very simple. In fact, you just have to return the array containing all the surveys. When there is no survey created, the function only returns an empty table. The estimation of this task is therefore very short compared to other functions.
+
+- **Task n°5: Get a specific survey**
+---
+  **Description:** This function allows us to access a particular survey via its name. Indeed, the function takes the name of the survey we are looking for and if it exists, the survey is returned and we can access the questions we have added to it.
+  <br/>
+
+  **Task Estimation:** 10 minutes.
+  <br/>
+
+  **Explanation:** Just like Task n°4, it is quite similar but a little bit longer to do because there is an error handling to implement because the survey in question must be created beforehand otherwise an error will appear. It is a simple task on the whole and requires little implementation time.
