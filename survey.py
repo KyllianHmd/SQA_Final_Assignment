@@ -27,6 +27,9 @@ class Controller:
 		self.surveyslist.append(newSurvey)
 		return newSurvey.surveyName + ' have been created'
 
+	def GetSurveysList(self):
+		return self.surveyslist
+
 	def AddQuestion(self, surveyName, question):
 		for survey in self.surveyslist:
 			i = 0
