@@ -72,22 +72,32 @@ class Controller:
 			err = "Error: Sorry, you can't add a question because the survey '" + surveyName + "' doesn't exist"
 			return err
 
-		def AddResponse(self, surveyName, response, userEmail):
-			if (RepresentsInt(response) == True):
-				if (int(response) <= 5 and int(response) >= 1):
-					for survey in self.surveyslist:
-						i = 0
-						if survey.surveyName == surveyName:
-							i = 1
-							err = survey.AddResponse(int(response), userEmail)
-							if err != None:
-								return err
-							else:
-								return "The response '" + str(response) + "' have been added by '" + userEmail + "' in the survey '" + surveyName + "'"
-					if i == 0:
-						err = "Error: Sorry, you can't add a response because the survey '" + surveyName + "' doesn't exist."
-						return err
-				else:
-					return "Error: The response must be an integer between 1 and 5."
+	def GetSurvey(self, surveyName):
+		for survey in self.surveyslist:
+			i = 0
+			if survey.surveyName == surveyName:
+				i = 1 
+				return survey
+		if i == 0:
+			err = "Error: Sorry, the survey '" + surveyName + "' doesn't exist"
+			return err
+
+	def AddResponse(self, surveyName, response, userEmail):
+		if (RepresentsInt(response) == True):
+			if (int(response) <= 5 and int(response) >= 1):
+				for survey in self.surveyslist:
+					i = 0
+					if survey.surveyName == surveyName:
+						i = 1
+						err = survey.AddResponse(int(response), userEmail)
+						if err != None:
+							return err
+						else:
+							return "The response '" + str(response) + "' have been added by '" + userEmail + "' in the survey '" + surveyName + "'"
+				if i == 0:
+					err = "Error: Sorry, you can't add a response because the survey '" + surveyName + "' doesn't exist."
+					return err
 			else:
-				return "Error: The response must be a valid integer."
+				return "Error: The response must be an integer between 1 and 5."
+		else:
+			return "Error: The response must be a valid integer."
