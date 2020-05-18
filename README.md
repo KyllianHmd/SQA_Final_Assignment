@@ -351,3 +351,36 @@ Then, we will finally be able to use Coverage. Type the following command to run
 After executing this command line, your terminal will display something like this:
 
 <img src="./img/coverage_run_pytest.png" alt="coverage_run_pytest"/>
+
+On our picture above, we can see that I have performed 55 test functions that are running and none of them failed.
+
+In order to have more details to know which function is passed or not, use the following command:
+<br/>
+
+<pre><code>$ coverage run -m pytest -v</code></pre>
+
+It will give you something like that, with all the details of passed or failed functions (picture below).
+
+<img src="./img/coverage_run_pytest-v.png" alt="coverage_run_pytest-v"/>
+
+It is also possible to use <code>coverage report</code> to report on the results. Execute the following command to get the details of our tests on our program:
+<br/>
+
+<pre><code>$ coverage report -m survey.py</code></pre>
+
+For our project, it will give you this kind of result.
+
+<img src="./img/coverage_report-m.png" alt="coverage_run_pytest-v"/>
+
+We can see that, for our project, we covered 100% of our code. So we tested everything and missed no functions to test. We can see that we made 162 statements which corresponded to the result tests that our functions had to return.
+
+Finally, still thanks to our Coverage tool, we can have a graphic version and a nicer presentation of our tests with the following command:
+<br/>
+
+<pre><code>$ coverage html survey.py</code></pre>
+
+This gives us a detailed report available on our local browser, showing us which part of the code was covered by our tests.
+
+<img src="./img/gif-test-coverage.gif" />
+
+_Note: I upload this video on youtube if you need to check in more details the presentation of the tests in a better quality: https://www.youtube.com/watch?v=oWBVTojG-uc_
