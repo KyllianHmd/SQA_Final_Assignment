@@ -42,3 +42,13 @@ class Controller:
 		if i == 0:
 			err = "Error: Sorry, you can't add a question because the survey '" + surveyName + "' doesn't exist"
 			return err
+
+	def GetSurvey(self, surveyName):
+		for survey in self.surveyslist:
+			i = 0
+			if survey.surveyName == surveyName:
+				i = 1 
+				return survey
+		if i == 0:
+			err = "Error: Sorry, the survey '" + surveyName + "' doesn't exist"
+			return err
