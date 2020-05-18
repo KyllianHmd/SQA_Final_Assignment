@@ -143,21 +143,19 @@ First of all, here is the structure of our code.
 There are 3 classes:
 
 1. Controller:
-
-   - Associated variables:
-     - surveyList: Array
+   - Parameters:
+     - surveyList: **`Array`**
 
 2. Survey:
-
-   - Associated variables:
-     - surveyName: String
-     - questions: Array
-     - surveyResponses: Array
+   - Parameters:
+     - surveyName: **`String`**
+     - questions: **`Array`**
+     - surveyResponses: **`Array`**
 
 3. SurveyResponse:
-   - Associated variables:
-     - userEmail: String
-     - responses: Array
+   - Parameters:
+     - userEmail: **`String`**
+     - responses: **`Array`**
 
 Thanks to our Controller class, all the functionalities of the project are reachable. The Controller class is composed of 8 asked functions.
 
