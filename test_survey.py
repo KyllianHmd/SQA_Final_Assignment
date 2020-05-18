@@ -398,3 +398,68 @@ def testGetSurveyResponses4():
 	assert surveyResponses == "Error: Sorry, the survey 'Food Survey' doesn't exist."
 	surveyResponses = example.GetSurveyResponses("Rugby Survey")
 	assert surveyResponses == "Error: Sorry, the survey 'Rugby Survey' doesn't exist."
+
+def testGetSurveyStatistics():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addQuestion = example.AddQuestion("Cars Survey", "Question2")
+	addResponse = example.AddResponse("Cars Survey", 2, "florian@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 1, "florian@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 1, "kyllian@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 4, "kyllian@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 2, "thomas@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 2, "thomas@epitech.eu")	
+	minValue, maxValue, average, sd, err = example.GetSurveyStatistics("Cars Survey")
+	assert minValue == 3
+	assert maxValue == 5
+	assert average == 4.0
+	assert sd == 1.0
+	assert err == "None"
+
+def testGetSurveyStatistics2():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addQuestion = example.AddQuestion("Cars Survey", "Question2")
+	addResponse = example.AddResponse("Cars Survey", 2, "florian@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 1, "florian@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 1, "kyllian@epitech.eu")
+	minValue, maxValue, average, sd, err = example.GetSurveyStatistics("Cars Survey")
+	assert minValue == 1
+	assert maxValue == 3
+	assert average == 2.0
+	assert sd == 1.41
+	assert err == "None"
+
+def testGetSurveyStatistics3():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addQuestion = example.AddQuestion("Cars Survey", "Question2")
+	addResponse = example.AddResponse("Cars Survey", 2, "florian@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 1, "florian@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 1, "kyllian@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 4, "thomas@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 4, "riwan@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 5, "riwan@epitech.eu")
+	minValue, maxValue, average, sd, err = example.GetSurveyStatistics("Hello Survey")
+	assert minValue == 0
+	assert maxValue == 0
+	assert average == 0
+	assert sd == 0
+	assert err == "Error: Sorry, the survey 'Hello Survey' doesn't exist."
+
+def testGetSurveyStatistics4():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addQuestion = example.AddQuestion("Cars Survey", "Question2")
+	addResponse = example.AddResponse("Cars Survey", 2, "florian@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 1, "florian@epitech.eu")
+	minValue, maxValue, average, sd, err = example.GetSurveyStatistics("Cars Survey")
+	assert minValue == 3
+	assert maxValue == 3
+	assert average == 3
+	assert sd == "Error: It requires a minimum of 2 users to calculate the standard deviation"
+	assert err == "None"
