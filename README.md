@@ -196,3 +196,21 @@ OUTPUT:
 </code></pre>
 
 If there is no survey created, the function will return you an empty array of Survey class.
+
+- **AddQuestion(surveyName, question)**
+
+This function allows us to add a question in a specific survey. You have to send the name of the survey and the question in parameter. You may call the function like this:
+
+<pre><code>mySurvey.AddQuestion("Example Survey", "Example Question")</code></pre>
+
+If all went well, the function will return:
+
+<pre><code>> 'Example Question' have been added in your survey 'Example Survey'</code></pre>
+
+In case of errors, the function may return you this:
+
+- If the survey doesn't exist, the function will return you:
+<pre><code>> Error: Sorry, you can't add a question because the survey 'Example Survey' doesn't exist</code></pre>
+
+- If you want to add more than 10 questions in a survey, the function will return you:
+<pre><code>> Error: You can't add more than 10 questions</code></pre>
