@@ -3,35 +3,11 @@
 ## Introduction
 
 First of all, this project is a software component in Python to store information about surveys and responses. This document is an handbook of best practices which highlights the good methods to follow in order to carry out a project successfully in a company. This document will cover these following themes:
-- [SQA - Final Assignment](#sqa---final-assignment)
-	- [Introduction](#introduction)
-	- [Project description](#project-description)
-- [Sprint backlog and task estimation](#sprint-backlog-and-task-estimation)
-	- [- **Task n°1: Create the Controller**](#ul-litask-n%c2%b01-create-the-controllerli-ul)
-	- [- **Task n°2: Create a Survey**](#ul-litask-n%c2%b02-create-a-surveyli-ul)
-	- [- **Task n°3: Add a Question**](#ul-litask-n%c2%b03-add-a-questionli-ul)
-	- [- **Task n°4: Get a list of all surveys**](#ul-litask-n%c2%b04-get-a-list-of-all-surveysli-ul)
-	- [- **Task n°5: Get a specific survey**](#ul-litask-n%c2%b05-get-a-specific-surveyli-ul)
-	- [- **Task n°6: Add a response**](#ul-litask-n%c2%b06-add-a-responseli-ul)
-	- [- **Task n°7: Get Survey Responses**](#ul-litask-n%c2%b07-get-survey-responsesli-ul)
-	- [- **Task n°8: Get Survey Statistics**](#ul-litask-n%c2%b08-get-survey-statisticsli-ul)
-	- [- **Task n°9: Get Question Statistics**](#ul-litask-n%c2%b09-get-question-statisticsli-ul)
-	- [- **Task n°10: Other functions needed**](#ul-litask-n%c2%b010-other-functions-neededli-ul)
 
 - [SQA - Final Assignment](#sqa---final-assignment)
 	- [Introduction](#introduction)
 	- [Project description](#project-description)
 - [Sprint backlog and task estimation](#sprint-backlog-and-task-estimation)
-	- [- **Task n°1: Create the Controller**](#ul-litask-n%c2%b01-create-the-controllerli-ul)
-	- [- **Task n°2: Create a Survey**](#ul-litask-n%c2%b02-create-a-surveyli-ul)
-	- [- **Task n°3: Add a Question**](#ul-litask-n%c2%b03-add-a-questionli-ul)
-	- [- **Task n°4: Get a list of all surveys**](#ul-litask-n%c2%b04-get-a-list-of-all-surveysli-ul)
-	- [- **Task n°5: Get a specific survey**](#ul-litask-n%c2%b05-get-a-specific-surveyli-ul)
-	- [- **Task n°6: Add a response**](#ul-litask-n%c2%b06-add-a-responseli-ul)
-	- [- **Task n°7: Get Survey Responses**](#ul-litask-n%c2%b07-get-survey-responsesli-ul)
-	- [- **Task n°8: Get Survey Statistics**](#ul-litask-n%c2%b08-get-survey-statisticsli-ul)
-	- [- **Task n°9: Get Question Statistics**](#ul-litask-n%c2%b09-get-question-statisticsli-ul)
-	- [- **Task n°10: Other functions needed**](#ul-litask-n%c2%b010-other-functions-neededli-ul)
 
 - [**Project Documentation**](#project-documentation)
 
@@ -52,7 +28,7 @@ The goal of this project is to create a software component for storing survey an
 As a reminder, the sprint backlog is the set of user stories from the product backlog that the team commits to deliver by the end of the sprint (user stories are put in the sprint backlog according to their business value and technical complexity). Thus, the most important work will be done first.
 
 - **Task n°1: Create the Controller**
----
+
   **Description:** The controller allows access to the different functions of our class "Survey" and our class "SurveyResponse". So, from the controller, we can for example create a survey, add a question or even get the statistics of a survey. In short, the controller is the structure of our program.
   <br/>
 
@@ -62,7 +38,7 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
   **Explanation:** Taking into account the implementation of all the functions of our classes, the controller is a longer task because it is simply the structure of our program. It is via this class Controller that we will manage the whole creation of a survey, add questions, answers and call the statistics functions.
 
 - **Task n°2: Create a Survey**
----
+  
   **Description:** It is essential to be able to create a survey. Therefore you need to create a function in our class "Survey", called in our Controller class, to be able to create a survey. The function will take the name of the survey you want to create as a parameter. When the function is called and does not return an error, it returns that the survey has been created successfully.
   <br/>
 
@@ -73,7 +49,7 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
 
 
 - **Task n°3: Add a Question**
----
+
   **Description:** In a survey, it is essential to add a question. Now that the class "Survey" has been created, we just have the function to create and implement in our class Controller and in our class Survey. The function takes in parameter the name of the survey in which we want to add the question and finally the question. When the function doesn't return any errors, we are left with the fact that the question has been added.
   <br/>
 
@@ -84,7 +60,7 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
 
 
 - **Task n°4: Get a list of all surveys**
----
+
   **Description:** This function allows you to have a list of all the surveys you have created. This function doesn't take anything in parameters because we only want to get the list of all the surveys we have created before.
   <br/>
 
@@ -94,7 +70,7 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
   **Explanation:** Getting a list of all the surveys you have created is very simple. In fact, you just have to return the array containing all the surveys. When there is no survey created, the function only returns an empty table. The estimation of this task is therefore very short compared to other functions.
 
 - **Task n°5: Get a specific survey**
----
+
   **Description:** This function allows us to access a particular survey via its name. Indeed, the function takes the name of the survey we are looking for and if it exists, the survey is returned and we can access the questions we have added to it.
   <br/>
 
@@ -105,7 +81,7 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
 
 
 - **Task n°6: Add a response**
----
+
   **Description:** Adding a response to a survey question is one of the main features of our project. Indeed, this function will lead to the creation of another class that will be called "SurveyResponse". In this class, we will link each response to a survey. And each response will be linked to a user. This function will therefore take the name of the survey, the response and finally the user email in order to identify the person who responded to the survey.
   <br/>
   
@@ -114,8 +90,8 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
 
   **Explanation:** Similar to Task n°3, this task is more complicated because it involves the creation of another "SurveyResponse" class and the fact that you have to link a user's responses to a survey. In comparison, having a large error handling and implementation via our Controller, our Survey class and finally in the last "SurveyResponse" class, this task will take about 1 hour to complete.
 
-  - **Task n°7: Get Survey Responses**
----
+- **Task n°7: Get Survey Responses**
+
   **Description:** This function will allow you to have all the answers given by all the users of a particular survey. This function will just take the name of the survey in parameter and return an array with all the answers of each user.
   <br/>
 
@@ -126,7 +102,7 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
 
 
 - **Task n°8: Get Survey Statistics**
----
+
   **Description:** This function allows you to have statistics of a survey in its entirety with all the answers of all the users. This function will take the name of the survey and return the minimum, maximum, average and standard deviation. An error will be returned if something goes wrong.
   <br/>
   
@@ -136,7 +112,7 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
   **Explanation:** In terms of difficulty, this is not the hardest task because in Python, we can easily make quick calculations such as average, min or max value, or even standard deviation. The longest thing to do will be the structure of the function to know how to get all the answers from all the users and how to calculate all the values between them.
 
 - **Task n°9: Get Question Statistics**
----
+
   **Description:** This function should provide the average, standard deviation, minimum and maximum score for a specific question on a Survey. The function will then take the question and the name of the survey as parameters. The function will then return the values of the different calculations.
   <br/>
 
@@ -146,7 +122,7 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
   **Explanation:** Almost the same task as the Task n°8, there is a strong errors handling required for this function. The calculations are not the hardest to do but the structure of the code is, it will take 20 minutes to correctly implement this function in our different classes.
 
 - **Task n°10: Other functions needed**
----
+
   **Description:** We will need 3 other functions (out of features) that will allow us to manage error handling and statistics. One function will have the role of simply giving the average of an array. Another function will tell us if an index exists in an array to avoid crashing our program. Finally, the last function will allow us to know if the user has put an answer between 1 and 5. (as the liker scale model).
   <br/>
 
