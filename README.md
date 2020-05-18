@@ -9,8 +9,7 @@ First of all, this project is a software component in Python to store informatio
 	- [Project description](#project-description)
 - [Sprint backlog and task estimation](#sprint-backlog-and-task-estimation)
 - [Velocity Metric](#velocity-metric)
-
-- [**Project Documentation**](#project-documentation)
+- [Project documentation](#project-documentation)
 
 - [**Unit testing and Test-Driven development**](#unit-testing-and-test-driven-development)
 
@@ -139,3 +138,180 @@ Velocity is the number of tasks a team completes during a sprint. To measure it,
 Velocity metric is an essential feedback mechanism for the team. It helps them measure whether the process changes they make improve or hinder their productivity. It also allows them to predict very precisely how many stories a team can make in a sprint.
 
 Without the Velocity, release planning is impossible. By knowing speed, a product owner can determine how many sprints it will take the team to reach the desired level of functionality, which can then be delivered. Based on the duration of the sprint, the product owner can set a release date.
+
+# Project documentation
+
+First of all, here is the structure of our code.
+
+There are 3 classes:
+
+1. Controller:
+
+   - Associated variables:
+     - surveyList: Array
+
+2. Survey:
+
+   - Associated variables:
+     - surveyName: String
+     - questions: Array
+     - surveyResponses: Array
+
+3. SurveyResponse:
+   - Associated variables:
+     - userEmail: String
+     - responses: Array
+
+Thanks to our Controller class, all the functionalities of the project are reachable. The Controller class is composed of 8 asked functions.
+
+First, we need to initialized our Controller class:
+
+<pre><code> mySurvey = Controller()</code></pre>
+
+Now, you will be able to call all the function contains in the Controller Class throught the **mySurvey** variable.
+
+- **CreateSurvey(surveyName)**
+
+Thanks to this function you can create a new survey. You may create as many surveys as you want. You have to send in parameter the name of your survey. For example, you just have to call the function like this:
+
+<pre><code> mySurvey.CreateSurvey("Example Survey")</code></pre>
+
+The function will return you:
+
+<pre><code>> Example Survey have been created</code></pre>
+
+- **GetSurveysList()**
+
+This function give us the possibility to retrieve all the surveys created before. You may call the function like this:
+
+<pre><code>surveyList = mySurvey.GetSurveysList()</code></pre>
+
+The function will return you an **array** of Survey class where there are all the surveys created before. You may access have all the name of all surveys by using a loop like this:
+
+<pre><code>for survey in surveysList:
+  print (survey.surveyName)
+
+OUTPUT:
+> Example Survey
+</code></pre>
+
+If there is no survey created, the function will return you an empty array of Survey class.
+
+- **AddQuestion(surveyName, question)**
+
+This function allows us to add a question in a specific survey. You have to send the name of the survey and the question in parameter. You may call the function like this:
+
+<pre><code>mySurvey.AddQuestion("Example Survey", "Example Question")</code></pre>
+
+If all went well, the function will return:
+
+<pre><code>> 'Example Question' have been added in your survey 'Example Survey'</code></pre>
+
+In case of errors, the function may return you this:
+
+- If the survey doesn't exist, the function will return you:
+<pre><code>> Error: Sorry, you can't add a question because the survey 'Example Survey' doesn't exist</code></pre>
+
+- If you want to add more than 10 questions in a survey, the function will return you:
+<pre><code>> Error: You can't add more than 10 questions</code></pre>
+
+- **GetSurvey(surveyName)**
+
+By making a call to this function, we can retrieve a specific survey. You just have to send the name of the survey in parameter. You may call the function like this:
+
+<pre><code>exampleSurvey = mySurvey.GetSurvey("Example Survey")</code></pre>
+
+If all went well, the function will return you the specific survey. Then, you will be able to retrieve the questions of this specific survey like that:
+
+<pre><code>questions = exampleSurvey.questions
+print(questions)
+
+OUTPUT:
+> ['Example Question']
+</code></pre>
+
+_Note: If there is no questions in the survey, the function will return you an empty array._
+
+In case of errors, the function may return you this:
+
+- If the survey doesn't exist, the function will return you:
+<pre><code>> Error: Sorry, the survey 'Example Survey' doesn't exist</code></pre>
+
+- **AddResponse(surveyName, response, userEmail)**
+
+This function allows us to add a response in a specific survey. You have to send the name of the survey, the response (an integer between 1 and 5) and the user email in parameter. You may call the function like this:
+
+<pre><code>mySurvey.AddResponse("Example Survey", 3, "kyllian@epitech.eu")</code></pre>
+
+If all went well, the function will return you:
+
+<pre><code>The response '3' have been added by 'kyllian@epitech.eu' in the survey 'Example Survey'
+</code></pre>
+
+In case of errors, the function may return you this:
+
+- If the format of the response isn't the good one, the function will return you:
+<pre><code>> Error: The response must be an integer between 1 and 5.</code></pre>
+
+- If the response given isn't a valid integer, the function will return you:
+<pre><code>> Error: The response must be a valid integer.</code></pre>
+
+- If the survey doesn't exist, the function will return you:
+<pre><code>> Error: Sorry, you can't add a response because the survey 'Example Survey' doesn't exist.</code></pre>
+
+- If you want to add more responses than the number of questions:
+<pre><code>> Error: You can't add more responses than the number of question.</code></pre>
+
+- If there is no questions:
+<pre><code>> Error: Sorry, you can't add a response because there is no questions</code></pre>
+
+- **GetSurveyResponses(surveyName)**
+
+This function give us the possibility to retrieve all the responses of a specific survey. You may call the function like this:
+
+<pre><code>surveyResponses = mySurvey.GetSurveyResponses("Example Survey")</code></pre>
+
+If all went well, the function will return you the specific survey response class. Then, you will be able to retrieve the responses of the users of this specific survey like that:
+
+<pre><code>for surveyResponse in surveyResponses:
+  print("user: ", surveyResponse.userEmail , "| responses: ", ", ".join(str(response) for response in surveyResponse.responses))
+
+OUTPUT:
+> user:  kyllian@epitech.eu | responses:  3
+</code></pre>
+
+In case of errors, the function may return you this:
+
+- If the survey doesn't exist, the function will return you:
+<pre><code>> Error: Sorry, the survey 'Example Survey' doesn't exist.</code></pre>
+
+* **GetSurveyStatistics(surveyName)**
+
+Thanks to this function, we could have the statistic of the survey (the min value, the max value, the average, the standard deviation, and an error if occured). You have to send the name of the survey in parameter. You may call the function like this:
+
+<pre><code>minValue, maxValue, average, sd, err = mySurvey.GetSurveyStatistics("Example Survey")</code></pre>
+
+If all went well, the function will return you all the statistics of the survey.
+
+In case of errors, the function may return you this:
+
+- If the survey doesn't exist, the function will return you:
+<pre><code>> Error: Sorry, the survey 'Example Survey' doesn't exist.</code></pre>
+
+_Note: The standard deviation will return 'Error: It requires a minimum of 2 users to calculate the standard deviation' if there is only one user that answer of the questions of the survey_
+
+- **GetQuestionStatistics(question, surveyName)**
+
+Thanks to this function, we could have the statistic of a specific question of the survey (the min value, the max value, the average, the standard deviation, and an error if occured). You have to send a question and the name of the survey in parameter. You have to call the function like this:
+
+<pre><code>minValue, maxValue, average, sd, err = mySurvey.GetQuestionStatistics("Example Question", "Example Survey")
+</code></pre>
+
+If all went well, the function will return you all the statistics of the specific question of the survey.
+
+In case of errors, the function may return you this:
+
+- If the survey doesn't exist, the function will return you:
+<pre><code>> Error: Sorry, the survey 'Example Survey' doesn't exist.</code></pre>
+
+_Note: The standard deviation will return 'Error: It requires a minimum of 2 users to calculate the standard deviation' if there is only one user that answer of the question of the survey_
