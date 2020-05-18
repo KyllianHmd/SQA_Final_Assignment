@@ -14,6 +14,7 @@ First of all, this project is a software component in Python to store informatio
 	- [- **Task n°5: Get a specific survey**](#ul-litask-n%c2%b05-get-a-specific-surveyli-ul)
 	- [- **Task n°6: Add a response**](#ul-litask-n%c2%b06-add-a-responseli-ul)
 	- [- **Task n°7: Get Survey Responses**](#ul-litask-n%c2%b07-get-survey-responsesli-ul)
+	- [- **Task n°8: Get Survey Statistics**](#ul-litask-n%c2%b08-get-survey-statisticsli-ul)
 
 - [SQA - Final Assignment](#sqa---final-assignment)
 	- [Introduction](#introduction)
@@ -26,6 +27,7 @@ First of all, this project is a software component in Python to store informatio
 	- [- **Task n°5: Get a specific survey**](#ul-litask-n%c2%b05-get-a-specific-surveyli-ul)
 	- [- **Task n°6: Add a response**](#ul-litask-n%c2%b06-add-a-responseli-ul)
 	- [- **Task n°7: Get Survey Responses**](#ul-litask-n%c2%b07-get-survey-responsesli-ul)
+	- [- **Task n°8: Get Survey Statistics**](#ul-litask-n%c2%b08-get-survey-statisticsli-ul)
 
 - [**Project Documentation**](#project-documentation)
 
@@ -117,3 +119,14 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
   <br/>
 
   **Explanation:** Like Task n°5, it is simply a matter of returning all the answers to a particular survey. The error handling will take a few minutes to do but the task is quite simple to perform.
+
+
+- **Task n°8: Get Survey Statistics**
+---
+  **Description:** This function allows you to have statistics of a survey in its entirety with all the answers of all the users. This function will take the name of the survey and return the minimum, maximum, average and standard deviation. An error will be returned if something goes wrong.
+  <br/>
+  
+  **Task Estimation:** 20 minutes.
+  <br/>
+
+  **Explanation:** In terms of difficulty, this is not the hardest task because in Python, we can easily make quick calculations such as average, min or max value, or even standard deviation. The longest thing to do will be the structure of the function to know how to get all the answers from all the users and how to calculate all the values between them.
