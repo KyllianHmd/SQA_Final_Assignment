@@ -163,3 +163,19 @@ There are 3 classes:
      - responses: Array
 
 Thanks to our Controller class, all the functionalities of the project are reachable. The Controller class is composed of 8 asked functions.
+
+First, we need to initialized our Controller class:
+
+<pre><code> mySurvey = Controller()</code></pre>
+
+Now, you will be able to call all the function contains in the Controller Class throught the **mySurvey** variable.
+
+- **CreateSurvey(surveyName)**
+
+Thanks to this function you can create a new survey. You may create as many surveys as you want. You have to send in parameter the name of your survey. For example, you just have to call the function like this:
+
+<pre><code> mySurvey.CreateSurvey("Example Survey")</code></pre>
+
+The function will return you:
+
+<pre><code>> Example Survey have been created</code></pre>
