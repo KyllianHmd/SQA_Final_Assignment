@@ -208,6 +208,51 @@ def testAddQuestion5():
 	addQuestion = example.AddQuestion("YesYes Survey", "Question3bis")
 	assert addQuestion == "Error: Sorry, you can't add a question because the survey 'YesYes Survey' doesn't exist"
 
+def testGetSurvey():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Life Survey")
+	addQuestion = example.AddQuestion("Life Survey", "Question1")
+	mySurvey = example.GetSurvey("Life Survey")
+	assert mySurvey.questions == ['Question1']
+	
+def testGetSurvey2():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Food Survey")
+	surveyCreated = example.CreateSurvey("Mexican Survey")
+	addQuestion = example.AddQuestion("Food Survey", "Question1")
+	addQuestion = example.AddQuestion("Food Survey", "Question2")
+	addQuestion = example.AddQuestion("Food Survey", "Question3")
+	addQuestion = example.AddQuestion("Food Survey", "Question4")
+	mySurvey = example.GetSurvey("Food Survey")
+	assert mySurvey.questions == ['Question1', 'Question2', 'Question3', 'Question4']
+	mySurvey = example.GetSurvey("Mexican Survey")
+	addQuestion = example.AddQuestion("Mexican Survey", "Question1bis")
+	addQuestion = example.AddQuestion("Mexican Survey", "Question2bis")
+	assert mySurvey.questions == ['Question1bis', 'Question2bis']
+
+def testGetSurvey3():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Food Survey")
+	addQuestion = example.AddQuestion("Food Survey", "Question1")
+	addQuestion = example.AddQuestion("Food Survey", "Question2")
+	addQuestion = example.AddQuestion("Food Survey", "Question3")
+	mySurvey = example.GetSurvey("Food Survey")
+	assert mySurvey.questions == ['Question1', 'Question2', 'Question3']
+	mySurvey = example.GetSurvey("Mexican Survey")
+	assert mySurvey == "Error: Sorry, the survey 'Mexican Survey' doesn't exist"
+
+def testGetSurvey4():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Food Survey")
+	mySurvey = example.GetSurvey("Food Survey")
+	assert mySurvey.questions == []
+	surveyCreated = example.CreateSurvey("Football Survey")
+	mySurvey = example.GetSurvey("Football Survey")
+	assert mySurvey.questions == []
+	surveyCreated = example.CreateSurvey("Rugby Survey")
+	mySurvey = example.GetSurvey("Rugby Survey")
+	assert mySurvey.questions == []
+
 def testAddResponse():
 	example = survey.Controller()
 	surveyCreated = example.CreateSurvey("Cars Survey")
