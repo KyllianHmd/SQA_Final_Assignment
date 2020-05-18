@@ -49,6 +49,24 @@ class Survey:
 	def GetSurveyResponses(self):
 		return self.surveyResponses
 
+	def GetSurveyStatistics(self):
+		score = 0
+		scoreValues = []
+		for surveyResponse in self.surveyResponses:
+			score = sum(surveyResponse.responses)
+			scoreValues.append(score)
+
+		minValue = min(scoreValues)
+		maxValue = max(scoreValues)
+		average = Average(scoreValues)
+		average = round(average, 2)
+		if len(scoreValues) <= 1:
+			sd = "Error: It requires a minimum of 2 users to calculate the standard deviation"
+		else:
+			sd = stdev(scoreValues)
+			sd = round(sd, 2)
+		return minValue, maxValue, average, sd, "None"
+
 class Controller:
 	def __init__(self):
 		self.surveyslist = []
@@ -113,3 +131,14 @@ class Controller:
 				return surveyResponses
 		if i == 0:
 			return "Error: Sorry, the survey '" + surveyName + "' doesn't exist."
+	
+	def GetSurveyStatistics(self, surveyName):
+		for survey in self.surveyslist:
+			i = 0
+			if survey.surveyName == surveyName:
+				i = 1 
+				minValue, maxValue, average, sd, err = survey.GetSurveyStatistics()
+				return minValue, maxValue, average, sd, err
+		if i == 0:
+			return 0, 0, 0, 0, "Error: Sorry, the survey '" + surveyName + "' doesn't exist."
+
