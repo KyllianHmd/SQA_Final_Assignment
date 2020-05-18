@@ -16,6 +16,7 @@ First of all, this project is a software component in Python to store informatio
 	- [- **Task n°7: Get Survey Responses**](#ul-litask-n%c2%b07-get-survey-responsesli-ul)
 	- [- **Task n°8: Get Survey Statistics**](#ul-litask-n%c2%b08-get-survey-statisticsli-ul)
 	- [- **Task n°9: Get Question Statistics**](#ul-litask-n%c2%b09-get-question-statisticsli-ul)
+	- [- **Task n°10: Other functions needed**](#ul-litask-n%c2%b010-other-functions-neededli-ul)
 
 - [SQA - Final Assignment](#sqa---final-assignment)
 	- [Introduction](#introduction)
@@ -30,6 +31,7 @@ First of all, this project is a software component in Python to store informatio
 	- [- **Task n°7: Get Survey Responses**](#ul-litask-n%c2%b07-get-survey-responsesli-ul)
 	- [- **Task n°8: Get Survey Statistics**](#ul-litask-n%c2%b08-get-survey-statisticsli-ul)
 	- [- **Task n°9: Get Question Statistics**](#ul-litask-n%c2%b09-get-question-statisticsli-ul)
+	- [- **Task n°10: Other functions needed**](#ul-litask-n%c2%b010-other-functions-neededli-ul)
 
 - [**Project Documentation**](#project-documentation)
 
@@ -142,3 +144,13 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
   <br/>
 
   **Explanation:** Almost the same task as the Task n°8, there is a strong errors handling required for this function. The calculations are not the hardest to do but the structure of the code is, it will take 20 minutes to correctly implement this function in our different classes.
+
+- **Task n°10: Other functions needed**
+---
+  **Description:** We will need 3 other functions (out of features) that will allow us to manage error handling and statistics. One function will have the role of simply giving the average of an array. Another function will tell us if an index exists in an array to avoid crashing our program. Finally, the last function will allow us to know if the user has put an answer between 1 and 5. (as the liker scale model).
+  <br/>
+
+  **Task Estimation:** 15 minutes.
+  <br/>
+
+  **Explanation:** About 5 minutes per function, they are not hard to develop but they are necessary for the good development of our program and will help us for the error management.
