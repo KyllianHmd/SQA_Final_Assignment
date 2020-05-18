@@ -8,6 +8,7 @@ First of all, this project is a software component in Python to store informatio
 	- [Introduction](#introduction)
 	- [Project description](#project-description)
 - [Sprint backlog and task estimation](#sprint-backlog-and-task-estimation)
+- [Velocity Metric](#velocity-metric)
 
 - [**Project Documentation**](#project-documentation)
 
@@ -130,3 +131,11 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
   <br/>
 
   **Explanation:** About 5 minutes per function, they are not hard to develop but they are necessary for the good development of our program and will help us for the error management.
+
+# Velocity Metric
+
+Velocity is the number of tasks a team completes during a sprint. To measure it, simply add up the number of tasks delivered in the last few sprints and average them. To have a reliable average, the velocity must be calculated over a minimum of 3 sprints. In addition, the experience helps in measuring the velocity metric of a sprint.
+
+Velocity metric is an essential feedback mechanism for the team. It helps them measure whether the process changes they make improve or hinder their productivity. It also allows them to predict very precisely how many stories a team can make in a sprint.
+
+Without the Velocity, release planning is impossible. By knowing speed, a product owner can determine how many sprints it will take the team to reach the desired level of functionality, which can then be delivered. Based on the duration of the sprint, the product owner can set a release date.
