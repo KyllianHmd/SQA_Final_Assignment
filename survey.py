@@ -1,5 +1,15 @@
 # Python - KYLLIAN HAMADOU - D19124158
 
+from statistics import stdev
+
+def IndexInList(index, lst):
+	if (index < len(lst)):
+		return True
+	return False
+
+def Average(lst): 
+    return sum(lst) / len(lst)
+
 def RepresentsInt(s):
     try: 
         int(s)
@@ -66,6 +76,39 @@ class Survey:
 			sd = stdev(scoreValues)
 			sd = round(sd, 2)
 		return minValue, maxValue, average, sd, "None"
+
+	def GetQuestionStatistics(self, question):
+		indexQ = self.questions.index(question)
+
+		score = 0
+		scoreValues = []
+		for surveyResponse in self.surveyResponses:
+			inList = IndexInList(indexQ, surveyResponse.responses)
+			if inList == False:
+				minValue = min(scoreValues)
+				maxValue = max(scoreValues)
+				average = Average(scoreValues)
+				average = round(average, 2)
+				if len(scoreValues) <= 1:
+					sd = "Error: It requires a minimum of 2 users to calculate the standard deviation"
+				else:
+					sd = stdev(scoreValues)
+					sd = round(sd, 2)
+				return minValue, maxValue, average, sd, "None"
+			score = surveyResponse.responses[indexQ]
+			scoreValues.append(score)
+
+		minValue = min(scoreValues)
+		maxValue = max(scoreValues)
+		average = Average(scoreValues)
+		average = round(average, 2)
+		if len(scoreValues) <= 1:
+			sd = "Error: It requires a minimum of 2 users to calculate the standard deviation"
+		else:
+			sd = stdev(scoreValues)
+			sd = round(sd, 2)
+		return minValue, maxValue, average, sd, "None"
+
 
 class Controller:
 	def __init__(self):
@@ -142,3 +185,12 @@ class Controller:
 		if i == 0:
 			return 0, 0, 0, 0, "Error: Sorry, the survey '" + surveyName + "' doesn't exist."
 
+	def GetQuestionStatistics(self, question, surveyName):
+		for survey in self.surveyslist:
+			i = 0
+			if survey.surveyName == surveyName:
+				i = 1 
+				minValue, maxValue, average, sd, err = survey.GetQuestionStatistics(question)
+				return minValue, maxValue, average, sd, err
+		if i == 0:
+			return 0, 0, 0, 0, "Error: Sorry, the survey '" + surveyName + "' doesn't exist."
