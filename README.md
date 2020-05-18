@@ -9,8 +9,7 @@ First of all, this project is a software component in Python to store informatio
 	- [Project description](#project-description)
 - [Sprint backlog and task estimation](#sprint-backlog-and-task-estimation)
 - [Velocity Metric](#velocity-metric)
-
-- [**Project Documentation**](#project-documentation)
+- [Project documentation](#project-documentation)
 
 - [**Unit testing and Test-Driven development**](#unit-testing-and-test-driven-development)
 
@@ -139,3 +138,28 @@ Velocity is the number of tasks a team completes during a sprint. To measure it,
 Velocity metric is an essential feedback mechanism for the team. It helps them measure whether the process changes they make improve or hinder their productivity. It also allows them to predict very precisely how many stories a team can make in a sprint.
 
 Without the Velocity, release planning is impossible. By knowing speed, a product owner can determine how many sprints it will take the team to reach the desired level of functionality, which can then be delivered. Based on the duration of the sprint, the product owner can set a release date.
+
+# Project documentation
+
+First of all, here is the structure of our code.
+
+There are 3 classes:
+
+1. Controller:
+
+   - Associated variables:
+     - surveyList: Array
+
+2. Survey:
+
+   - Associated variables:
+     - surveyName: String
+     - questions: Array
+     - surveyResponses: Array
+
+3. SurveyResponse:
+   - Associated variables:
+     - userEmail: String
+     - responses: Array
+
+Thanks to our Controller class, all the functionalities of the project are reachable. The Controller class is composed of 8 asked functions.
