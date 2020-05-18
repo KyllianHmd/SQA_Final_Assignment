@@ -15,6 +15,7 @@ First of all, this project is a software component in Python to store informatio
 	- [- **Task n°6: Add a response**](#ul-litask-n%c2%b06-add-a-responseli-ul)
 	- [- **Task n°7: Get Survey Responses**](#ul-litask-n%c2%b07-get-survey-responsesli-ul)
 	- [- **Task n°8: Get Survey Statistics**](#ul-litask-n%c2%b08-get-survey-statisticsli-ul)
+	- [- **Task n°9: Get Question Statistics**](#ul-litask-n%c2%b09-get-question-statisticsli-ul)
 
 - [SQA - Final Assignment](#sqa---final-assignment)
 	- [Introduction](#introduction)
@@ -28,6 +29,7 @@ First of all, this project is a software component in Python to store informatio
 	- [- **Task n°6: Add a response**](#ul-litask-n%c2%b06-add-a-responseli-ul)
 	- [- **Task n°7: Get Survey Responses**](#ul-litask-n%c2%b07-get-survey-responsesli-ul)
 	- [- **Task n°8: Get Survey Statistics**](#ul-litask-n%c2%b08-get-survey-statisticsli-ul)
+	- [- **Task n°9: Get Question Statistics**](#ul-litask-n%c2%b09-get-question-statisticsli-ul)
 
 - [**Project Documentation**](#project-documentation)
 
@@ -130,3 +132,13 @@ As a reminder, the sprint backlog is the set of user stories from the product ba
   <br/>
 
   **Explanation:** In terms of difficulty, this is not the hardest task because in Python, we can easily make quick calculations such as average, min or max value, or even standard deviation. The longest thing to do will be the structure of the function to know how to get all the answers from all the users and how to calculate all the values between them.
+
+- **Task n°9: Get Question Statistics**
+---
+  **Description:** This function should provide the average, standard deviation, minimum and maximum score for a specific question on a Survey. The function will then take the question and the name of the survey as parameters. The function will then return the values of the different calculations.
+  <br/>
+
+  **Task Estimation:** 20 minutes.
+  <br/>
+
+  **Explanation:** Almost the same task as the Task n°8, there is a strong errors handling required for this function. The calculations are not the hardest to do but the structure of the code is, it will take 20 minutes to correctly implement this function in our different classes.
