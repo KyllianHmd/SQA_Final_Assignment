@@ -7,11 +7,13 @@ First of all, this project is a software component in Python to store informatio
 	- [Introduction](#introduction)
 	- [Project description](#project-description)
 - [Sprint backlog and task estimation](#sprint-backlog-and-task-estimation)
+	- [- **Task n°1: Create the Controller**](#ul-litask-n%c2%b01-create-the-controllerli-ul)
 
 - [SQA - Final Assignment](#sqa---final-assignment)
 	- [Introduction](#introduction)
 	- [Project description](#project-description)
 - [Sprint backlog and task estimation](#sprint-backlog-and-task-estimation)
+	- [- **Task n°1: Create the Controller**](#ul-litask-n%c2%b01-create-the-controllerli-ul)
 
 - [**Project Documentation**](#project-documentation)
 
@@ -30,3 +32,13 @@ The goal of this project is to create a software component for storing survey an
 # Sprint backlog and task estimation
 
 As a reminder, the sprint backlog is the set of user stories from the product backlog that the team commits to deliver by the end of the sprint (user stories are put in the sprint backlog according to their business value and technical complexity). Thus, the most important work will be done first.
+
+- **Task n°1: Create the Controller**
+---
+  **Description:** The controller allows access to the different functions of our class "Survey" and our class "SurveyResponse". So, from the controller, we can for example create a survey, add a question or even get the statistics of a survey. In short, the controller is the structure of our program.
+  <br/>
+
+  **Task Estimation:** 1 hour.
+  <br/>
+
+  **Explanation:** Taking into account the implementation of all the functions of our classes, the controller is a longer task because it is simply the structure of our program. It is via this class Controller that we will manage the whole creation of a survey, add questions, answers and call the statistics functions.
