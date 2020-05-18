@@ -214,3 +214,25 @@ In case of errors, the function may return you this:
 
 - If you want to add more than 10 questions in a survey, the function will return you:
 <pre><code>> Error: You can't add more than 10 questions</code></pre>
+
+- **GetSurvey(surveyName)**
+
+By making a call to this function, we can retrieve a specific survey. You just have to send the name of the survey in parameter. You may call the function like this:
+
+<pre><code>exampleSurvey = mySurvey.GetSurvey("Example Survey")</code></pre>
+
+If all went well, the function will return you the specific survey. Then, you will be able to retrieve the questions of this specific survey like that:
+
+<pre><code>questions = exampleSurvey.questions
+print(questions)
+
+OUTPUT:
+> ['Example Question']
+</code></pre>
+
+_Note: If there is no questions in the survey, the function will return you an empty array._
+
+In case of errors, the function may return you this:
+
+- If the survey doesn't exist, the function will return you:
+<pre><code>> Error: Sorry, the survey 'Example Survey' doesn't exist</code></pre>
