@@ -13,8 +13,6 @@ First of all, this project is a software component in Python to store informatio
 - [Unit testing and Test-Driven development](#unit-testing-and-test-driven-development)
 - [Test coverage metric](#test-coverage-metric)
 
-- [**Test coverage metric**](#test-coverage-metric)
-
 - [**Team version-control**](#team-version-control)
 
 - [**Code-review checklist**](#code-review-checklist)
