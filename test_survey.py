@@ -353,3 +353,48 @@ def testAddResponse9():
 	assert addResponse == "Error: Sorry, you can't add a response because the survey 'Football Survey' doesn't exist."
 	addResponse = example.AddResponse("Cars Survey", 2, "riwan@epitech.eu")
 	assert addResponse == "The response '2' have been added by 'riwan@epitech.eu' in the survey 'Cars Survey'"
+
+def testGetSurveyResponses():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addResponse = example.AddResponse("Cars Survey", 2, "florian@epitech.eu")
+	surveyResponses = example.GetSurveyResponses("Cars Survey")
+	for surveyResponse in surveyResponses:
+		assert (", ".join(str(response) for response in surveyResponse.responses)) == "2"
+
+def testGetSurveyResponses2():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addQuestion = example.AddQuestion("Cars Survey", "Question2")
+	addQuestion = example.AddQuestion("Cars Survey", "Question3")
+	addResponse = example.AddResponse("Cars Survey", 2, "florian@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 4, "florian@epitech.eu")
+	addResponse = example.AddResponse("Cars Survey", 1, "florian@epitech.eu")
+	surveyResponses = example.GetSurveyResponses("Cars Survey")
+	for surveyResponse in surveyResponses:
+		assert (", ".join(str(response) for response in surveyResponse.responses)) == "2, 4, 1"
+
+def testGetSurveyResponses3():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addQuestion = example.AddQuestion("Cars Survey", "Question2")
+	addQuestion = example.AddQuestion("Cars Survey", "Question3")
+	surveyResponses = example.GetSurveyResponses("Cars Survey")
+	for surveyResponse in surveyResponses:
+		assert (", ".join(str(response) for response in surveyResponse.responses)) == ""
+
+def testGetSurveyResponses4():
+	example = survey.Controller()
+	surveyCreated = example.CreateSurvey("Cars Survey")
+	addQuestion = example.AddQuestion("Cars Survey", "Question1")
+	addQuestion = example.AddQuestion("Cars Survey", "Question2")
+	addQuestion = example.AddQuestion("Cars Survey", "Question3")
+	surveyResponses = example.GetSurveyResponses("Charlie Survey")
+	assert surveyResponses == "Error: Sorry, the survey 'Charlie Survey' doesn't exist."
+	surveyResponses = example.GetSurveyResponses("Food Survey")
+	assert surveyResponses == "Error: Sorry, the survey 'Food Survey' doesn't exist."
+	surveyResponses = example.GetSurveyResponses("Rugby Survey")
+	assert surveyResponses == "Error: Sorry, the survey 'Rugby Survey' doesn't exist."
